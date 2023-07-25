@@ -1,0 +1,699 @@
+<div class="p-t lease-section">
+    <div class="container-fluid">
+        <p class="text-blue fs-6 fw-bold">Add Property</p>
+        <div class="row">
+            <div class="col-12">
+                <!-- tabs for property  -->
+                <div class="nav d-flex flex-column flex-lg-row nav-pills" id="v-pills-tab" role="tablist"
+                    aria-orientation="vertical">
+                    <!---------1---------->
+                    <div class="guest border-blue rounded p-12 me-2 mt-2">
+                        <button class="property active text-blue fw-bold bg-transparent border-0" id="v-pills-view-tab"
+                            data-bs-toggle="pill" data-bs-target="#v-pills-property1" type="button" role="tab"
+                            aria-controls="v-pills-property" aria-selected="true">General info
+                        </button>
+                    </div>
+                    <!---------2---------->
+                    <div class="guest border rounded p-12 me-2 mt-2">
+                        <button class="property text-blue fw-bold bg-transparent border-0" id="v-pills-view-tab"
+                            data-bs-toggle="pill" data-bs-target="#v-pills-property2" type="button" role="tab"
+                            aria-controls="v-pills-property" aria-selected="false">Buildings
+                        </button>
+                    </div>
+                    <!---------3---------->
+                    <div class="guest border rounded p-12 me-2 mt-2">
+                        <button class="property text-blue fw-bold bg-transparent border-0" id="v-pills-view-tab"
+                            data-bs-toggle="pill" data-bs-target="#v-pills-property3" type="button" role="tab"
+                            aria-controls="v-pills-property" aria-selected="false">Operating Unit Type
+                        </button>
+                    </div>
+                    <!---------4---------->
+                    <div class="guest border rounded p-12 me-2 mt-2">
+                        <button class="property text-blue fw-bold bg-transparent border-0" id="v-pills-view-tab"
+                            data-bs-toggle="pill" data-bs-target="#v-pills-property4" type="button" role="tab"
+                            aria-controls="v-pills-property" aria-selected="false">Units
+                        </button>
+                    </div>
+                    <!---------5---------->
+                    <div class="guest border rounded p-12 me-2 mt-2">
+                        <button class="property text-blue fw-bold bg-transparent border-0" id="v-pills-view-tab"
+                            data-bs-toggle="pill" data-bs-target="#v-pills-property5" type="button" role="tab"
+                            aria-controls="v-pills-property" aria-selected="true">Amenities
+                        </button>
+                    </div>
+                    <!---------6---------->
+                    <div class="guest border rounded p-12 me-2 mt-2">
+                        <button class="property text-blue fw-bold bg-transparent border-0" id="v-pills-view-tab"
+                            data-bs-toggle="pill" data-bs-target="#v-pills-property6" type="button" role="tab"
+                            aria-controls="v-pills-property" aria-selected="false">Fee & SD
+                        </button>
+                    </div>
+                    <!---------7---------->
+                    <div class="guest border rounded p-12 me-2 mt-2">
+                        <button class="property text-blue fw-bold bg-transparent border-0" id="v-pills-view-tab"
+                            data-bs-toggle="pill" data-bs-target="#v-pills-property7" type="button" role="tab"
+                            aria-controls="v-pills-property" aria-selected="false">Mortgage Info
+                        </button>
+                    </div>
+                    <!---------8---------->
+                    <div class="guest border rounded p-12 me-2 mt-2">
+                        <button class="property text-blue fw-bold bg-transparent border-0" id="v-pills-view-tab"
+                            data-bs-toggle="pill" data-bs-target="#v-pills-property8" type="button" role="tab"
+                            aria-controls="v-pills-property" aria-selected="false">Maintenance Info
+                        </button>
+                    </div>
+                    <!---------9---------->
+                    <div class="guest border rounded p-12 me-2 mt-2">
+                        <button class="property text-blue fw-bold bg-transparent border-0" id="v-pills-view-tab"
+                            data-bs-toggle="pill" data-bs-target="#v-pills-property9" type="button" role="tab"
+                            aria-controls="v-pills-property" aria-selected="false">Fee & SD
+                        </button>
+                    </div>
+                    <!---------10---------->
+                    <div class="guest border rounded p-12 me-2 mt-2">
+                        <button class="property text-blue fw-bold bg-transparent border-0" id="v-pills-view-tab"
+                            data-bs-toggle="pill" data-bs-target="#v-pills-property10" type="button" role="tab"
+                            aria-controls="v-pills-property" aria-selected="false">Mortgage Info
+                        </button>
+                    </div>
+                    <!---------11---------->
+                    <div class="guest border rounded p-12 me-2 mt-2">
+                        <button class="property text-blue fw-bold bg-transparent border-0" id="v-pills-view-tab"
+                            data-bs-toggle="pill" data-bs-target="#v-pills-property11" type="button" role="tab"
+                            aria-controls="v-pills-property" aria-selected="false">Maintenance Info
+                        </button>
+                    </div>
+                </div>
+                <div class="tab-content" id="v-pills-tabContent">
+                    <!---------1---------->
+                    <div class="tab-pane fade show active" id="v-pills-property1" role="tabpanel"
+                        aria-labelledby="v-pills-view-tab">
+                        <div class="general-info">
+                            <div class="bg-light mt-3 p-3 rounded fs-6">
+                                <div class="mt-1">
+                                    <p class="text-blue fs-6 fw-bold">General Information</p>
+                                    <div class="d-flex flex-wrap justify-content-start align-items-center">
+                                        <div class="me-sm-5 mt-3">
+                                            <h4 class="fs-6">Property Id*</h4>
+                                            <div class="p-inputgroup">
+                                                <input pInputText placeholder="Eg: Fairmount" />
+                                            </div>
+                                        </div>
+                                        <div class="me-sm-5 mt-3">
+                                            <h4 class="fs-6">Property Name*</h4>
+                                            <div class="p-inputgroup">
+                                                <input pInputText placeholder="Eg: The Fairmount Waterfront" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-wrap justify-content-start align-items-baseline">
+                                        <div class="me-sm-5 mt-3">
+                                            <h4 class="fs-6">Address 1*</h4>
+                                            <div class="card flex justify-content-center">
+                                                <textarea rows="3" cols="20" pInputTextarea [(ngModel)]="value"
+                                                    class="border-0"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="me-sm-5 mt-3">
+                                            <h4 class="fs-6">Street#</h4>
+                                            <div class="p-inputgroup">
+                                                <input pInputText placeholder="Eg: Address 2" />
+                                            </div>
+                                        </div>
+                                        <div class="me-sm-5 mt-3">
+                                            <h4 class="fs-6">Street Address*</h4>
+                                            <div class="p-inputgroup">
+                                                <input pInputText placeholder="Eg: Address 2" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-wrap justify-content-start align-items-baseline">
+                                        <div class="me-sm-5 mt-3">
+                                            <h4 class="fs-6">Address 2* </h4>
+                                            <div class="card flex justify-content-center">
+                                                <textarea rows="3" cols="20" pInputTextarea [(ngModel)]="value"
+                                                    class="border-0"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="me-sm-5 mt-3">
+                                            <h4 class="fs-6">Street#</h4>
+                                            <div class="p-inputgroup">
+                                                <input pInputText placeholder="Eg: Address 2" />
+                                            </div>
+                                        </div>
+                                        <div class="me-sm-5 mt-3">
+                                            <h4 class="fs-6">Street Address*</h4>
+                                            <div class="p-inputgroup">
+                                                <input pInputText placeholder="Eg: Address 2" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-wrap justify-content-start align-items-center">
+                                        <div class="me-sm-5 mt-3">
+                                            <h4 class="fs-6">Country* </h4>
+                                            <div class="card flex justify-content-center border-0 ">
+                                                <p-dropdown [options]="cities" optionLabel="name" class="border-light"
+                                                    placeholder=" Select"></p-dropdown>
+                                            </div>
+                                        </div>
+                                        <div class="me-sm-5 mt-3">
+                                            <h4 class="fs-6">State/Province*</h4>
+                                            <div class="card flex justify-content-center border-0 ">
+                                                <p-dropdown [options]="cities" optionLabel="name" class="border-light"
+                                                    placeholder=" Select"></p-dropdown>
+                                            </div>
+                                        </div>
+                                        <div class="me-sm-5 mt-3">
+                                            <h4 class="fs-6">City*</h4>
+                                            <div class="p-inputgroup">
+                                                <input pInputText placeholder="Select" />
+                                            </div>
+                                        </div>
+                                        <div class="me-sm-5 mt-3">
+                                            <h4 class="fs-6">ZipCode*</h4>
+                                            <div class="p-inputgroup">
+                                                <input pInputText placeholder="Eg: 120021" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-wrap justify-content-start align-items-center">
+                                        <div class="me-sm-5 mt-3">
+                                            <h4 class="fs-6">Regional Sites* </h4>
+                                            <div class="card flex justify-content-center border-0 ">
+                                                <p-dropdown [options]="cities" optionLabel="name" class="border-light"
+                                                    placeholder=" Select"></p-dropdown>
+                                            </div>
+                                        </div>
+                                        <div class="me-sm-5 mt-3">
+                                            <h4 class="fs-6">Market*</h4>
+                                            <div class="card flex justify-content-center border-0 ">
+                                                <p-dropdown [options]="cities" optionLabel="name" class="border-light"
+                                                    placeholder=" Select"></p-dropdown>
+                                            </div>
+                                        </div>
+                                        <div class="me-sm-5 mt-3">
+                                            <h4 class="fs-6">Area*</h4>
+                                            <div class="card flex justify-content-center border-0 ">
+                                                <p-dropdown [options]="cities" optionLabel="name" class="border-light"
+                                                    placeholder=" Select"></p-dropdown>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-wrap justify-content-start align-items-center">
+                                        <div class="me-sm-5 mt-3">
+                                            <h4 class="fs-6">PM*</h4>
+                                            <div class="card flex justify-content-center border-0 ">
+                                                <p-dropdown [options]="cities" optionLabel="name" class="border-light"
+                                                    placeholder=" Select"></p-dropdown>
+                                            </div>
+                                        </div>
+                                        <div class="me-sm-5 mt-3">
+                                            <h4 class="fs-6">Regional Office*</h4>
+                                            <div class="card flex justify-content-center border-0 ">
+                                                <p-dropdown [options]="cities" optionLabel="name" class="border-light"
+                                                    placeholder=" Select"></p-dropdown>
+                                            </div>
+                                        </div>
+                                        <div class="me-sm-5 mt-4">
+                                            <div class="form-check mt-0 mt-sm-3 fw-normal">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Inactive
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-light mt-3 p-3 rounded fs-6 fw-bold mt-3">
+                                <div class="mt-1">
+                                    <p class="text-blue fs-6">Specifications</p>
+                                    <div class="d-flex flex-wrap justify-content-start align-items-center">
+                                        <div class="me-3 mt-3">
+                                            <h4 class="fs-6">Property Type*</h4>
+                                            <div class="p-inputgroup">
+                                                <input pInputText placeholder="Keyword" />
+                                            </div>
+                                        </div>
+                                        <div class="me-3 mt-3">
+                                            <h4 class="fs-6">Total Sq Footage*</h4>
+                                            <div class="p-inputgroup">
+                                                <input pInputText placeholder="Select" />
+                                            </div>
+                                        </div>
+                                        <div class="me-3 mt-3">
+                                            <h4 class="fs-6">No. of Buildings*</h4>
+                                            <div class="p-inputgroup">
+                                                <input pInputText placeholder="Select" />
+                                            </div>
+                                        </div>
+                                        <div class="me-3 mt-3">
+                                            <h4 class="fs-6">No. of Units*</h4>
+                                            <div class="p-inputgroup">
+                                                <input pInputText placeholder="Select" />
+                                            </div>
+                                        </div>
+                                        <div class="me-3 mt-3">
+                                            <h4 class="fs-6">Starting Period*</h4>
+                                            <div class="p-inputgroup">
+                                                <input pInputText placeholder="Select" />
+                                            </div>
+                                        </div>
+                                        <div class="me-3 mt-3">
+                                            <h4 class="fs-6">Income Restriction & Amount</h4>
+                                            <div class="p-inputgroup">
+                                                <input pInputText placeholder="Select" />
+                                            </div>
+                                        </div>
+                                        <div class="me-3 mt-3">
+                                            <h4 class="fs-6">Description*</h4>
+                                            <div class="card flex justify-content-center">
+                                                <textarea rows="5" cols="40" pInputTextarea [(ngModel)]="value"
+                                                    class="border-0"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-light mt-3 p-3 rounded fs-6 fw-bold mt-3">
+                                <div class="mt-1">
+                                    <p class="text-blue fs-6">Bank Information</p>
+                                    <div class="d-flex flex-wrap justify-content-start align-items-center">
+                                        <div class="d-flex align-items-center justify-content-center mt-3 me-4">
+                                            <h4 class="fs-6 me-3 mb-0">Bank accounts for withdrawal/refund *</h4>
+                                            <div class="card flex justify-content-center border-0 ">
+                                                <p-dropdown [options]="cities" optionLabel="name" class="border-light"
+                                                    placeholder=" Select"></p-dropdown>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center mt-3 me-4">
+                                            <h4 class="fs-6 me-3 mb-0">Bank Account for Deposit *</h4>
+                                            <div class="card flex justify-content-center border-0 ">
+                                                <p-dropdown [options]="cities" optionLabel="name" class="border-light"
+                                                    placeholder=" Select"></p-dropdown>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-light mt-3 p-3 rounded fs-6 fw-bold mt-3">
+                                <div class="mt-1">
+                                    <p class="text-blue fs-6">Acquisition Information</p>
+                                    <div class="d-flex flex-wrap justify-content-start align-items-center">
+                                        <div class="me-3 mt-3">
+                                            <h4 class="fs-6">Acquisition Date*</h4>
+                                            <div class="p-inputgroup">
+                                                <input pInputText placeholder="Eg: 10/06/2023" />
+                                            </div>
+                                        </div>
+                                        <div class="me-3 mt-3">
+                                            <h4 class="fs-6">Year Built</h4>
+                                            <div class="card flex justify-content-center border-0 ">
+                                                <p-dropdown [options]="cities" optionLabel="name" class="border-light"
+                                                    placeholder=" Select"></p-dropdown>
+                                            </div>
+                                        </div>
+                                        <div class="me-3 mt-3">
+                                            <h4 class="fs-6">Building Type</h4>
+                                            <div class="card flex justify-content-center border-0 ">
+                                                <p-dropdown [options]="cities" optionLabel="name" class="border-light"
+                                                    placeholder=" Select"></p-dropdown>
+                                            </div>
+                                        </div>
+                                        <div class="me-3 mt-3">
+                                            <h4 class="fs-6">As Is NOI ($)*</h4>
+                                            <div class="p-inputgroup">
+                                                <input pInputText placeholder="Eg: 2000" />
+                                            </div>
+                                        </div>
+                                        <div class="me-3 mt-3">
+                                            <h4 class="fs-6">Purchase Price ($)*</h4>
+                                            <div class="p-inputgroup">
+                                                <input pInputText placeholder="Eg: 2000" />
+                                            </div>
+                                        </div>
+                                        <div class="me-3 mt-3">
+                                            <h4 class="fs-6">Cap Rate on Acquisition (%)</h4>
+                                            <div class="p-inputgroup">
+                                                <input pInputText placeholder="Eg: 2000" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="buttons-section d-flex justify-content-start align-items-center my-4 ">
+                                <div class="login-btn py-2 px-5 rounded me-2">
+                                    <button type="submit" class="btn-login bg-transparent border-0">Save</button>
+                                </div>
+                                <div class="cancel-btn py-2 px-5 rounded mt-2 mt-sm-0">
+                                    <button type="button" class="border-0 bg-white">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---------2---------->
+                    <div class="tab-pane fade" id="v-pills-property2" role="tabpanel"
+                        aria-labelledby="v-pills-view-tab">
+                        <div class="manage-building">
+                            <p class="text-blue fs-5 fw-semibold mt-3 ps-2">Manage Building</p>
+                            <div class="bg-light mt-3 p-3 rounded fs-6">
+                                <div class="mt-1">
+                                    <p class="text-blue fs-6 fw-bold">Add Building</p>
+                                    <div class="d-flex flex-wrap justify-content-start align-items-center">
+                                        <div class="me-sm-5 mt-3">
+                                            <h4 class="fs-6">Building Id*</h4>
+                                            <div class="p-inputgroup">
+                                                <input pInputText placeholder="Eg: Fairmount" />
+                                            </div>
+                                        </div>
+                                        <div class="me-sm-5 mt-3">
+                                            <h4 class="fs-6">Building Name*</h4>
+                                            <div class="p-inputgroup">
+                                                <input pInputText placeholder="Eg: Fairmount" />
+                                            </div>
+                                        </div>
+                                        <div class="me-sm-5 mt-3">
+                                            <h4 class="fs-6">Number of Units*</h4>
+                                            <div class="p-inputgroup">
+                                                <input pInputText placeholder="Eg: Fairmount" />
+                                            </div>
+                                        </div>
+                                        <div class="form-check mt-0 mt-sm-3 fw-normal mt-4">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="flexCheckDefault">
+                                            <label class="form-check-label" for="flexCheckDefault">
+                                                Same as property address
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-wrap justify-content-start align-items-center">
+                                        <div class="me-sm-5 mt-3">
+                                            <h4 class="fs-6">Street #</h4>
+                                            <div class="p-inputgroup">
+                                                <input pInputText placeholder="Eg: Fairmount" />
+                                            </div>
+                                        </div>
+                                        <div class="me-sm-5 mt-3">
+                                            <h4 class="fs-6">Street Name</h4>
+                                            <div class="p-inputgroup">
+                                                <input pInputText placeholder="Eg: Fairmount" />
+                                            </div>
+                                        </div>
+                                        <div class="me-sm-5 mt-3">
+                                            <h4 class="fs-6">Postal Code</h4>
+                                            <div class="p-inputgroup">
+                                                <input pInputText placeholder="Eg: Fairmount" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-wrap justify-content-start align-items-center">
+                                        <div class="me-sm-5 mt-3">
+                                            <h4 class="fs-6">Description</h4>
+                                            <div class="card flex justify-content-center">
+                                                <textarea rows="3" cols="40" pInputTextarea [(ngModel)]="value"
+                                                    class="border-0"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="me-sm-5 mt-3">
+                                            <h4 class="fs-6">Year Built*</h4>
+                                            <div class="p-inputgroup">
+                                                <input pInputText placeholder="Select" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-wrap justify-content-start align-items-baseline">
+                                        <div
+                                            class="buttons-section d-flex justify-content-start align-items-center my-4 ">
+                                            <div class="login-btn py-2 px-5 rounded me-2">
+                                                <button type="submit"
+                                                    class="btn-login bg-transparent border-0">Save</button>
+                                            </div>
+                                            <div class="login-btn py-2 px-5 rounded me-2">
+                                                <button type="submit" class="btn-login bg-transparent border-0">Save &
+                                                    Add Another</button>
+                                            </div>
+                                            <div class="cancel-btn py-2 px-5 rounded mt-2 mt-sm-0">
+                                                <button type="button" class="border-0 bg-transparent">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-light mt-3 p-3 rounded fs-6 fw-bold mt-3">
+                                <div class="d-flex justify-content-start align-items-center">
+                                    <h4 class="fs-6 mb-0 me-3">Status</h4>
+                                    <div class="card flex justify-content-center border-0 ">
+                                        <p-dropdown [options]="cities" optionLabel="name" class="border-light"
+                                            placeholder="Active"></p-dropdown>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="customers-list bg-light rounded">
+                                <p-table [tableStyle]="{ 'min-width': '50rem' }">
+                                    <ng-template pTemplate="header">
+                                        <tr>
+                                            <th>Building Name<span><svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12.7956 16.2443C12.697 16.2448 12.5994 16.2255 12.5084 16.1878C12.4174 16.15 12.3348 16.0944 12.2656 16.0243L7.26559 11.0243C7.16586 10.8784 7.12086 10.702 7.13852 10.5261C7.15618 10.3503 7.23536 10.1863 7.3621 10.0632C7.48885 9.94003 7.65501 9.86559 7.83128 9.85298C8.00755 9.84038 8.18262 9.89043 8.32559 9.9943L12.7956 14.4343L17.2656 9.9943C17.4065 9.90291 17.5741 9.86149 17.7414 9.87668C17.9087 9.89186 18.0661 9.96278 18.1883 10.0781C18.3105 10.1933 18.3904 10.3463 18.4153 10.5124C18.4402 10.6786 18.4086 10.8483 18.3256 10.9943L13.3256 15.9943C13.2589 16.0699 13.1775 16.131 13.0864 16.174C12.9953 16.217 12.8963 16.2409 12.7956 16.2443Z" fill="white"/>
+                                                </svg>
+                                                </span></th>
+                                            <th>Building id</th>
+                                            <th>Number of Units</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </ng-template>
+                                    <ng-template pTemplate="body" let-product>
+                                        <tr>
+                                            <td>{{ product.code }}</td>
+                                            <td>{{ product.name }}</td>
+                                            <td>{{ product.category }}</td>
+                                            <td>{{ product.quantity }}</td>
+                                        </tr>
+                                    </ng-template>
+                                </p-table>
+                                <div class="card flex justify-content-center border-top-0">
+                                    <p-paginator (onPageChange)="onPageChange($event)" [first]="first"></p-paginator>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---------3---------->
+                    <div class="tab-pane fade" id="v-pills-property3" role="tabpanel"
+                        aria-labelledby="v-pills-view-tab">
+                        <div class="operating-unit-type">
+                            <div class="bg-light mt-3 p-3 rounded fs-6 fw-bold mt-3">
+                                <h4 class="fs-6 mb-0 me-3">List of Operating Unit Type</h4>
+                            </div>
+                            <div class="customers-list bg-light rounded">
+                                <p-table [tableStyle]="{ 'min-width': '210rem' }">
+                                    <ng-template pTemplate="header">
+                                        <tr>
+                                            <th>Market</th>
+                                            <th>Prop Id</th>
+                                            <th>Unit Type</th>
+                                            <th>Description</th>
+                                            <th>Market</th>
+                                            <th>Market Rent</th>
+                                            <th>SD</th>
+                                            <th>Square Ft.</th>
+                                            <th>Unit Kind</th>
+                                            <th>Bedroom Type</th>
+                                            <th># Bedroom</th>
+                                            <th>Bath Type</th>
+                                            <th># bath</th>
+                                            <th>Balcony Patio</th>
+                                            <th>Furnished</th>
+                                            <th>Amenity Setup</th>
+                                            <th># Units</th>
+                                            <th>Lease Term Detail</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </ng-template>
+                                    <ng-template pTemplate="body" let-product>
+                                        <tr>
+                                            <td>{{ product.code }}</td>
+                                            <td>{{ product.name }}</td>
+                                            <td>{{ product.category }}</td>
+                                            <td>{{ product.quantity }}</td>
+                                        </tr>
+                                    </ng-template>
+                                </p-table>
+                                <div class="card flex justify-content-center border-top-0">
+                                    <p-paginator (onPageChange)="onPageChange($event)" [first]="first"></p-paginator>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---------4---------->
+                    <div class="tab-pane fade" id="v-pills-property4" role="tabpanel"
+                        aria-labelledby="v-pills-view-tab">
+                        <div class="unit">
+                            <div class="bg-light mt-3 p-3 rounded fs-6 fw-bold mt-3">
+                                <div class="mt-1">
+                                    <div class="d-flex flex-wrap justify-content-start align-items-center">
+                                        <div class="me-3 mt-3">
+                                            <h4 class="fs-6">BID</h4>
+                                            <div class="p-inputgroup">
+                                                <input pInputText placeholder="Keyword" />
+                                            </div>
+                                        </div>
+                                        <div class="me-3 mt-3">
+                                            <h4 class="fs-6">Unit Number</h4>
+                                            <div class="p-inputgroup">
+                                                <input pInputText placeholder="Select" />
+                                            </div>
+                                        </div>
+                                        <div class="me-3 mt-3">
+                                            <h4 class="fs-6">Unit Type</h4>
+                                            <div class="card flex justify-content-center border-0 ">
+                                                <p-dropdown [options]="cities" optionLabel="name" class="border-light"
+                                                    placeholder="Active"></p-dropdown>
+                                            </div>
+                                        </div>
+                                        <div class="me-3 mt-3">
+                                            <h4 class="fs-6">Street Address</h4>
+                                            <div class="p-inputgroup">
+                                                <input pInputText placeholder="Select" />
+                                            </div>
+                                        </div>
+                                        <div class="me-3 mt-3">
+                                            <h4 class="fs-6">Unit Status</h4>
+                                            <div class="p-inputgroup">
+                                                <input pInputText placeholder="Select" />
+                                            </div>
+                                        </div>
+                                        <div class="me-3 mt-3">
+                                            <h4 class="fs-6">First Name</h4>
+                                            <div class="p-inputgroup">
+                                                <input pInputText placeholder="Select" />
+                                            </div>
+                                        </div>
+                                        <div class="me-3 mt-3">
+                                            <h4 class="fs-6">Last Name</h4>
+                                            <div class="card flex justify-content-center">
+                                                <textarea rows="5" cols="40" pInputTextarea [(ngModel)]="value"
+                                                    class="border-0"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="customers-list bg-light rounded">
+                                <p-table [tableStyle]="{ 'min-width': '210rem' }">
+                                    <ng-template pTemplate="header">
+                                        <tr>
+                                            <th>Market</th>
+                                            <th>Prop Id</th>
+                                            <th>Unit Type</th>
+                                            <th>Description</th>
+                                            <th>Market</th>
+                                            <th>Market Rent</th>
+                                            <th>SD</th>
+                                            <th>Square Ft.</th>
+                                            <th>Unit Kind</th>
+                                            <th>Bedroom Type</th>
+                                            <th># Bedroom</th>
+                                            <th>Bath Type</th>
+                                            <th># bath</th>
+                                            <th>Balcony Patio</th>
+                                            <th>Furnished</th>
+                                            <th>Amenity Setup</th>
+                                            <th># Units</th>
+                                            <th>Lease Term Detail</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </ng-template>
+                                    <ng-template pTemplate="body" let-product>
+                                        <tr>
+                                            <td>{{ product.code }}</td>
+                                            <td>{{ product.name }}</td>
+                                            <td>{{ product.category }}</td>
+                                            <td>{{ product.quantity }}</td>
+                                        </tr>
+                                    </ng-template>
+                                </p-table>
+                                <div class="card flex justify-content-center border-top-0">
+                                    <p-paginator (onPageChange)="onPageChange($event)" [first]="first"></p-paginator>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---------5---------->
+                    <div class="tab-pane fade" id="v-pills-property5" role="tabpanel"
+                        aria-labelledby="v-pills-view-tab">
+                        5
+                    </div>
+                    <!---------6---------->
+                    <div class="tab-pane fade" id="v-pills-property6" role="tabpanel"
+                        aria-labelledby="v-pills-view-tab">
+                        6
+                    </div>
+                    <!---------7---------->
+                    <div class="tab-pane fade" id="v-pills-property7" role="tabpanel"
+                        aria-labelledby="v-pills-view-tab">
+                        7
+                    </div>
+                    <!---------8---------->
+                    <div class="tab-pane fade" id="v-pills-property8" role="tabpanel"
+                        aria-labelledby="v-pills-view-tab">
+                        8
+                    </div>
+                    <!---------9---------->
+                    <div class="tab-pane fade" id="v-pills-property9" role="tabpanel"
+                        aria-labelledby="v-pills-view-tab">
+                        9
+                    </div>
+                    <!--------10---------->
+                    <div class="tab-pane fade" id="v-pills-property10" role="tabpanel"
+                        aria-labelledby="v-pills-view-tab">
+                        10
+                    </div>
+                    <!---------11---------->
+                    <div class="tab-pane fade" id="v-pills-property11" role="tabpanel"
+                        aria-labelledby="v-pills-view-tab">
+                        11
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- sdasdasdsd -->
+
+<!--<div class="guest border-blue rounded p-12 me-2 mt-2">
+                        <a href="" class="text-decoration-none text-blue fw-bold">General info</a>
+                    </div>
+                    <div class="rental guest border rounded p-12 me-2 mt-2">
+                        <a href="" class="text-decoration-none text-gray fw-medium">Buildings</a>
+                    </div>
+                    <div class="rental guest border rounded p-12 me-2 mt-2">
+                        <a href="" class="text-decoration-none text-gray fw-medium">Operating Unit Type</a>
+                    </div>
+                    <div class="rental guest border rounded p-12 me-2 mt-2">
+                        <a href="" class="text-decoration-none text-gray fw-medium">Units</a>
+                    </div>
+                    <div class="rental guest border rounded p-12 me-2 mt-2">
+                        <a href="" class="text-decoration-none text-gray fw-medium">Amenities</a>
+                    </div>
+                    <div class="rental guest border rounded p-12 me-2 mt-2">
+                        <a href="" class="text-decoration-none text-gray fw-medium">Fee & SD</a>
+                    </div>
+                    <div class="rental guest border rounded p-12 me-2 mt-2">
+                        <a href="" class="text-decoration-none text-gray fw-medium">Mortgage Info</a>
+                    </div>
+                    <div class="rental guest border rounded p-12 me-2 mt-2">
+                        <a href="" class="text-decoration-none text-gray fw-medium">Maintenance Info</a>
+                    </div>
+                    <div class="rental guest border rounded p-12 me-2 mt-2">
+                        <a href="" class="text-decoration-none text-gray fw-medium">Photos & Files</a>
+                    </div>
+                    <div class="rental guest border rounded p-12 me-2 mt-2">
+                        <a href="" class="text-decoration-none text-gray fw-medium">Notes</a>
+                    </div>
+                    <div class="rental guest border rounded p-12 me-2 mt-2">
+                        <a href="" class="text-decoration-none text-gray fw-medium">Property Preference</a>
+                    </div>
+                </div> -->

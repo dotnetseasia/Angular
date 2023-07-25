@@ -1,0 +1,83 @@
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb ">
+                        <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-blue">Property
+                                Setup</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page"><a href="#"
+                                class="text-decoration-none text-blue fw-bold">Check List Area</a></li>
+                    </ol>
+                </nav>
+                <div class="bg-light rounded">
+                    <div class=" mt-3 p-3">
+                        <h6 class="text-blue fw-bold">Check List Questions</h6>
+                        <div class="row justify-content-start align-items-center">
+                            <div class="col-lg-5 col-12">
+                                <div class="text-center mt-3 mt-lg-4">
+                                    <h4 class="fs-6 text-center">Available Active Properties</h4>
+                                    <div class="mytextarea card flex justify-content-center">
+                                        <textarea rows="5" cols="30" pInputTextarea [(ngModel)]="value"
+                                            class="border-light p-2"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-1 col-12">
+                                <div class="text-center mt-4">
+                                    <div class="right-icon my-2">
+                                        <a href="">
+                                            <img src="assets/images/right-icon-arrow.png" class="img-fluid"
+                                                alt="arrow-icon">
+                                        </a>
+                                    </div>
+                                    <div class="right-icon my-2">
+                                        <a href="">
+                                            <img src="assets/images/left-icon-arrow.png" class="img-fluid"
+                                                alt="arrow-icon">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-12">
+                                <div class="text-center mt-3 mt-lg-4">
+                                    <h4 class="fs-6 text-center">Assigned Properties</h4>
+                                    <div class="mytextarea card flex justify-content-center">
+                                        <textarea rows="5" cols="30" pInputTextarea [(ngModel)]="value"
+                                            class="border-light p-2"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons-section d-flex justify-content-start align-items-center mt-4">
+                    <div class="login-btn py-2 px-5 rounded me-2">
+                        <button type="submit" class="btn-login bg-transparent border-0">Add Checklist Questions</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Add checklist question HTML -->
+<div class="bg-light mt-3 p-3 rounded">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center ">
+        <div class="">
+            <h4 class="fs-6">Checklist Questions*</h4>
+            <div class="p-inputgroup">
+                <input pInputText placeholder="Eg: GS" />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="buttons-section d-flex justify-content-start align-items-center mt-4">
+    <div class="login-btn py-2 px-5 rounded me-2">
+        <button type="submit" class="btn-login bg-transparent border-0">Save</button>
+    </div>
+    <div class="cancel-btn py-2 px-5 rounded mt-2 mt-sm-0">
+        <button type="button" class="border-0 bg-white">Cancel</button>
+    </div>
+</div>

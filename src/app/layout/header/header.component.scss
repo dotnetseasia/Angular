@@ -1,0 +1,31 @@
+// header css
+
+.header-sec {
+
+    // padding-left: 264px;
+
+    .header-items {
+        background-color: #F7F7F7;
+    }
+}
+
+.serch-itmes {
+    .top-buttons {
+        background: #E4EBFF;
+        padding: 12px 16px;
+        transition: all ease 0.3s;
+
+        span svg {
+            fill: #00165A;
+        }
+
+        &:hover {
+            background-color: #00165A;
+
+            span svg {
+                fill: #E4EBFF;
+            }
+        }
+    }
+}
+

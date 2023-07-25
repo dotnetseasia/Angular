@@ -1,0 +1,270 @@
+<!--nav bar of Property Area -->
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb ">
+        <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-blue">Property Setup</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page"><a href="#"
+        class="text-decoration-none text-blue fw-bold">Property Area</a></li>
+    </ol>
+</nav>
+
+<!-- Property Area HTML -->
+<div class="form-container">
+    <form [formGroup]="updateArea">
+        <div class="bg-light mt-3 p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="me-3">
+                        <h4 class="fs-6">Status</h4>
+                        <div class="my-2 ">
+                            <div class="card flex justify-content-center border-0">
+                                <p-dropdown [options]="selectedStatus" optionLabel="name" class="border-light"
+                                    placeholder="Select" formControlName="status" (onChange)="getAreadata($event)"
+                                    [(ngModel)]="selectedState"></p-dropdown>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mx-3">
+                        <h4 class="fs-6">Area Name</h4>
+                        <div class="my-2">
+                            <div class="card flex justify-content-center border-0">
+                                <p-dropdown [options]="selectedArea" optionLabel="name" class="border-light"
+                                    placeholder="Keyword" formControlName="area"></p-dropdown>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mx-3">
+                        <div class="buttons-section d-flex justify-content-end align-items-center mt-4">
+                            <div class="login-btn py-2 px-5 rounded me-2">
+                                <button type="submit" class="btn-login bg-transparent border-0"
+                                    (click)="onEditArea()">Edit Area</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="buttons-section d-flex justify-content-end align-items-center mt-4">
+                        <div class="login-btn py-2 px-5 rounded me-2">
+                            <button type="submit" class="btn-login bg-transparent border-0"
+                                (click)="onCreateArea()">Create Area</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+<!-- Edit Area HTML -->
+<div class="create-area-section" *ngIf="editArea">
+    <form [formGroup]="updateArea">
+        <div class="bg-light">
+            <div class="bg-light mt-3 p-3">
+                <div class="d-flex flex-wrap justify-content-start align-items-center">
+                    <div class="mx-3 mt-3">
+                        <h4 class="fs-6">Area Name</h4>
+                        <div class="p-inputgroup">
+                            <input pInputText placeholder="Eg: area" formControlName="areaName" />
+                        </div>
+
+                    </div>
+                    <div class="mx-3 mt-3">
+                        <h4 class="fs-6">Description</h4>
+                        <div class="p-inputgroup">
+                            <input pInputText placeholder="Keyword" formControlName="areaDescription" />
+                        </div>
+                    </div>
+                    <div class="mx-3 mt-3">
+                        <h4 class="fs-6">Regional Manager</h4>
+                        <div class="card flex justify-content-center border-0 w-50">
+                            <p-dropdown [options]="selectedRegionalManager" optionLabel="name" optionValue="value"
+                                class="border-light" placeholder="Select"
+                                formControlName="regionalManager"></p-dropdown>
+                        </div>
+                    </div>
+                    <div class="mx-3 mt-3">
+                        <div class="form-check mt-0 mt-lg-4">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                formControlName="inactiveCheckbox">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Inactive
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-start align-items-center">
+                    <div class="col-lg-5 col-12">
+                        <div class="text-center mt-3 mt-lg-4">
+                            <h4 class="fs-6 text-center">Available Active Properties</h4>
+                            <div class="mytextarea card flex justify-content-center">
+                                <div class="border-light p-2" style=" min-height: 162px;">
+                                    <ul style="list-style: none;">
+                                        <li style="cursor: pointer;" *ngFor="let list of availableActiveProperties"
+                                            [ngClass]="{'activeSelected': isSelectedactiveProperties(list)}"
+                                            (click)="activePropertiesSelected(list)">{{list.propertyName}}
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col-12">
+                        <div class="text-center mt-4">
+                            <div class="right-icon my-2">
+                                <a>
+                                    <img src="assets/images/right-icon-arrow.png" class="img-fluid"
+                                        (click)="onrightTransfer()" alt="arrow-icon">
+                                </a>
+                            </div>
+                            <div class="right-icon my-2">
+                                <a>
+                                    <img src="assets/images/left-icon-arrow.png" class="img-fluid"
+                                        (click)="onleftTransfer()" alt="arrow-icon">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 col-12">
+                        <div class="text-center mt-3 mt-lg-4">
+                            <h4 class="fs-6 text-center">Assigned Properties</h4>
+                            <div class="mytextarea card flex justify-content-center">
+                                <div class="border-light p-2">
+                                    <ul style="list-style: none;">
+                                        <li style="cursor: pointer;" *ngFor="let list of assignedProperties"
+                                            [ngClass]="{'assignedSelected': isSelectedassigned(list)}"
+                                            (click)="assignedPropertiesSelected(list)">{{list.propertyID_AG }} -
+                                            {{list.propertyName}}
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Update/Cancel Area Button HTML -->
+            <div class="save-button">
+                <div class="buttons-section d-flex justify-content-start align-items-center mt-4">
+                    <div class="login-btn py-2 px-5 rounded me-2">
+                        <button type="submit" class="btn-login bg-transparent border-0">
+                            Update
+                        </button>
+                    </div>
+                    <div class="cancel-btn py-2 px-5 rounded mt-2 mt-sm-0">
+                        <button type="button" class="border-0 bg-white">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- Create Area HTML -->
+<div class="create-area-section" *ngIf="createArea">
+    <div class="bg-light">
+        <form [formGroup]="createNewArea" (ngSubmit)="onSaveArea()">
+            <div class="bg-light mt-3 p-3">
+                <div class="d-flex flex-wrap justify-content-start align-items-center">
+                    <div class="mx-3 mt-3">
+                        <h4 class="fs-6">Area Name</h4>
+                        <div class="p-inputgroup">
+                            <input pInputText placeholder="Eg: Gs" formControlName="areaName" />
+                        </div>
+                    </div>
+                    <div class="mx-3 mt-3">
+                        <h4 class="fs-6">Description</h4>
+                        <div class="p-inputgroup">
+                            <input pInputText placeholder="Keyword" formControlName="areaDescription" />
+                        </div>
+                    </div>
+                    <div class="mx-3 mt-3">
+                        <h4 class="fs-6">Regional Manager</h4>
+                        <div class="card flex justify-content-center border-0 w-50">
+                            <p-dropdown [options]="selectedRegionalManager" optionLabel="name" class="border-light"
+                                placeholder="Select" formControlName="regionalManager"></p-dropdown>
+
+                        </div>
+                    </div>
+                    <div class="mx-3 mt-3">
+                        <div class="form-check mt-0 mt-lg-4">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                formControlName="inactiveCheckbox">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Inactive
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-start align-items-center">
+                    <div class="col-lg-5 col-12">
+                        <div class="text-center mt-3 mt-lg-4">
+                            <h4 class="fs-6 text-center">Available Active Properties</h4>
+                            <div class="mytextarea card flex justify-content-center">
+                                <div class="border-light p-2" style=" min-height: 162px;">
+                                    <ul style="list-style: none;">
+                                        <li style="cursor: pointer;" *ngFor="let list of availableActiveProperties"
+                                            [ngClass]="{'activeSelected': isSelectedactiveProperties(list)}"
+                                            (click)="activePropertiesSelected(list)">{{list.propertyName}}
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- arrow-icon Area Button HTML -->
+                    <div class="col-lg-1 col-12">
+                        <div class="text-center mt-4">
+                            <div class="right-icon my-2">
+                                <a>
+                                    <img src="assets/images/right-icon-arrow.png" class="img-fluid"
+                                        (click)="onrightTransfer()" alt="arrow-icon">
+                                </a>
+                            </div>
+                            <div class="right-icon my-2">
+                                <a>
+                                    <img src="assets/images/left-icon-arrow.png" class="img-fluid"
+                                        (click)="onleftTransfer()" alt="arrow-icon">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-12">
+                        <div class="text-center mt-3 mt-lg-4">
+                            <h4 class="fs-6 text-center">Assigned Properties</h4>
+                            <div class="mytextarea  card flex justify-content-center">
+                                <div class="border-light p-2" style=" min-height: 162px;">
+                                    <ul style="list-style: none;">
+                                        <li style="cursor: pointer;" *ngFor="let list of assignedProperties"
+                                            [ngClass]="{'assignedSelected': isSelectedassigned(list)}"
+                                            (click)="assignedPropertiesSelected(list)">{{list.propertyName}}
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Save/Cancel Area Button HTML -->
+            <div class="save-button">
+                <div class="buttons-section d-flex justify-content-start align-items-center mt-4">
+                    <div class="login-btn py-2 px-5 rounded me-2">
+                        <button type="submit" class="btn-login bg-transparent border-0">
+                            Save
+                        </button>
+                    </div>
+                    <div class="cancel-btn py-2 px-5 rounded mt-2 mt-sm-0">
+                        <button type="button" class="border-0 bg-white">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>

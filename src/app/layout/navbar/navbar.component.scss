@@ -1,0 +1,22 @@
+
+.navbar-section {
+    .nav-button  {
+        color: #00165A;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #00165A;
+            transition: width .2s;
+            top: 17px;
+            position: relative;
+        }
+
+        &:hover::after {
+            width: 100%;
+            transition: width .3s;
+        }
+}
+}

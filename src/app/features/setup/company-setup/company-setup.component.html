@@ -1,0 +1,169 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb ">
+        <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-blue">Accounting</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page"><a href="#"
+                class="text-decoration-none text-blue fw-bold">Account Type</a></li>
+    </ol>
+</nav>
+<div class="row">
+    <div class="col-lg-12 col-xxl-6 col-sm-12">
+        <div class="setup-setion p-3 my-2 rounded">
+            <div class="d-flex justify-content-between align-items-center">
+                <h4 class="heading-info fs-6 fw-bold"> Company Info </h4>
+                <button href="#" class="text-decoration-none border-0 bg-transparent"><img
+                        src="assets/images/edit.svg" class="img-fluid" alt="Edit icon"
+                        (click)="toggleHtml()"></button>
+            </div>
+            <div class="d-flex justify-content-between align-items-center pt-3">
+                <div class="company-info">
+                    <p class="mb-1 font-black fw-bold fs-14">Company Name: <span class="text-blue">Mainstreet Equity
+                            corp.</span></p>
+                    <p class="mb-1 font-black fw-bold fs-14">Company Name: <span class="text-blue">Mainstreet Equity
+                            corp.</span></p>
+                </div>
+                <div class="logo-img">
+                    <img src="assets/images/logo-info.png" class="img-fluid" alt="logo">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 col-xxl-6 col-sm-12">
+        <div class="setup-setion p-3 my-2 rounded">
+            <div class="">
+                <h4 class="heading-info mb-0 fs-6 fw-bold">Address Info</h4>
+            </div>
+            <div class="d-flex justify-content-between align-items-center pt-3">
+                <div class="company-name">
+                    <p class="mb-1 text-gray fw-medium fs-14">Address: <span class="text-black">305 - 10 Avenue
+                            SE</span>
+                    </p>
+                    <p class="mb-1 text-gray fw-medium fs-14">Country: <span class="text-black">Canada</span></p>
+                    <p class="mb-1 text-gray fw-medium fs-14">State/Province:<span class="text-black">Alberta</span>
+                    </p>
+                </div>
+                <div class="city-sec">
+                    <div class="company-name">
+                        <p class="mb-1 text-gray fw-medium fs-14">City: <span class="text-black">Calgary: </span>
+                        </p>
+                        <p class="mb-1 text-gray fw-medium fs-14">Zip:<span class="text-black"> T2G-0W2 </span></p>
+                        <p class="mb-1 text-gray fw-medium fs-14">Phone:<span class="text-black"> (403)
+                                215-6060</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Edit button HTML -->
+
+<div class="mt-5"  *ngIf="showHtml" >
+    <div class="main-btn my-0 my-lg-3 my-xl-4">
+        <button [routerLink]="['/user/setup/company-setup/ChangePassword']"
+            class="py-2 px-3 rounded text-decoration-none">Change Password
+        </button>
+    </div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb ">
+            <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-blue">Property Setup</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="#"
+                    class="text-decoration-none text-blue fw-bold">Account Setup</a></li>
+        </ol>
+    </nav>
+    <div class="bg-light mt-3 p-3 rounded fs-6 fw-bold rounded">
+        <form class="form-emp" [formGroup]="UpdateForm" >
+
+            <p class="text-blue">Company Info</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-wrap justify-content-start align-items-center">
+                    <div class="mx-3 mt-3">
+                        <h4 class="fs-6">Company Name</h4>
+                        <div class="p-inputgroup">
+                            <input pInputText   formControlName='Companyname' placeholder="Eg:  Mainstreet"  />
+                        </div>
+                    </div>
+                    <div class="mx-3 mt-3">
+                        <h4 class="fs-6">Website</h4>
+                        <div class="p-inputgroup">
+                            <input pInputText placeholder="Eg: http://mainst.biz/"  formControlName='Website' />
+                        </div>
+                    </div>
+                    <div class="mx-3 mt-3">
+                        <h4 class="fs-6">Logo</h4>
+                        <div class="p-inputgroup">
+                            <input type="file" pInputText placeholder="Upload" class="bg-white" >
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="bg-light mt-3 p-3 rounded fs-6 fw-bold rounded">
+                <p class="text-blue">Address Info</p>
+                <div
+                    class="bg-light py-3 d-flex flex-column flex-md-row justify-content-between align-items-center rounded">
+                    <div class="d-flex flex-wrap justify-content-start align-items-center">
+                        <div class="mx-3 mb-3">
+                            <h4 class="fs-6">Address</h4>
+                            <div class="p-input-icon-left search border bg-white rounded">
+                                <input type="text" pInputText class="border-0 ps-2 px-2"
+                                    placeholder=" 305 - 10 Avenue SE"   formControlName='Address'  >
+                                <img src="assets/images/search.svg" class="img-fluid pe-3" alt="logo">
+                            </div>
+                        </div>
+
+                        <div class="mx-3 mb-3">
+                            <h4 class="fs-6">Country</h4>
+                            <div class="card flex justify-content-center border-0">
+                                <p-dropdown [options]="country" optionLabel="name" optionValue="value"
+                                 class="border-light" formControlName='Country'
+                                    (onChange)="onCountryChange($event)" placeholder="Select"></p-dropdown>
+                            </div>
+                        </div>
+                        <div class="mx-3 mb-3">
+                            <h4 class="fs-6">State/Province</h4>
+                            <div class="card flex justify-content-center border-0">
+                                <p-dropdown [options]="state" optionLabel="statename" optionValue="value"
+                                    class="border-light" formControlName='State'
+                                    (onChange)="onStateChange($event)" placeholder="Select"></p-dropdown>
+                            </div>
+                        </div>
+                        <div class="mx-3 mb-3">
+                            <h4 class="fs-6">City</h4>
+                            <div class="card flex justify-content-center border-0">
+                                <p-dropdown [options]="city" optionLabel="name" class="border-light"
+                                    formControlName='City' placeholder="Select"></p-dropdown>
+                            </div>
+                        </div>
+
+                        <div class="mx-3 mb-3">
+                            <h4 class="fs-6">Zip</h4>
+                            <div class="card flex justify-content-center border-0">
+                                <input pInputText formControlName='Zip'>
+                            </div>
+                        </div>
+                        <div class="mx-3 mb-3">
+                            <h4 class="fs-6">Phone</h4>
+                            <div class="card flex justify-content-center border-0">
+                                <input pInputText formControlName='Phone'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+            <div class="buttons-section d-flex justify-content-start align-items-center mt-4">
+                <div class="login-btn py-2 px-5 rounded me-2">
+                    <button type="submit" class="btn-login bg-transparent border-0">Update</button>
+                </div>
+                <div class="cancel-btn py-2 px-5 rounded mt-2 mt-sm-0">
+                    <button type="button" class="border-0 bg-white"   (click)="showtoggleHtml()">Cancel</button>
+                </div>
+               
+            </div>
+       
+
+
+       </div>

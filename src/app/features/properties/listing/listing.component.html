@@ -1,0 +1,81 @@
+<section class="listing p-t">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="text-blue fs-6 fw-bold mb-0 mt-3">Canada</h3>
+                <div class="bg-light mt-3 p-3 rounded fs-6">
+                    <div class="mt-1">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center">
+                            <p class="text-blue fs-6 fw-bold mb-0">List of Properties in Canada</p>
+                            <div class="buttons-section d-flex justify-content-start align-items-center my-3 ">
+                                <div class="login-btn rounded me-2">
+                                    <button type="submit" class="btn-login bg-transparent border-0" (click)="getPropertySummarybyCountryId()">Show All</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="customers-list bg-light rounded">
+                    <p-table [tableStyle]="{ 'min-width': '50rem' }" [value]="myValue" *ngIf="show()">
+                        <ng-template pTemplate="header">
+                            <tr>
+                                <th>State/Province</th>
+                                <th>Total Properties</th>
+                                <th>Total Buildings</th>
+                                <th>Total Units</th> 
+                            </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-product>
+                            <tr>
+                                <td>{{ product.stateName }}</td>
+                                <td>{{ product.totalProperties }}</td>
+                                <td>{{ product.totalBuildings }}</td>
+                                <td>{{ product.totalUnits }}</td>
+                            </tr>
+                        </ng-template>
+                    </p-table>
+                    <p-table [tableStyle]="{ 'min-width': '50rem' }" [value]="myValue" *ngIf="hide()">
+                        <ng-template pTemplate="header">
+                            <tr>
+                                <th>State/Province</th>
+                                <th>City</th>
+                                <th>Property Area</th>
+                                <th>Property Id</th>
+                                <th>Regional Manager</th>
+                                <th>Property Manager</th>
+                                <th>No. of Buildings</th>
+                                <th>No. of Units</th> 
+                                <th>Status</th>
+                            </tr>
+                        </ng-template>
+
+                        <ng-template pTemplate="body" let-product>
+                            <tr>
+                                <td>{{ product.stateName }}</td>
+                                <td>{{ product.cityName }}</td>
+                                <td>{{ product.propertyArea }}</td>
+                                <td>{{ product.propertyID_AG }}</td>
+                                <td>{{ product.regionalManagerName }}</td>
+                                <td>{{ product.mangername }}</td>
+                                <td>{{ product.noofBuildings }}</td>
+                                <td>{{ product.noofUnits }}</td>
+                                <td>{{ product.rowStatus }}</td>
+                            </tr>
+                        </ng-template>
+                    </p-table>
+                </div>
+                <div class="card flex justify-content-center border-top-0">
+                    <p-paginator (onPageChange)="onPageChange($event)" [first]="first"></p-paginator>
+                </div>
+                <div class="buttons-section d-flex justify-content-start align-items-center my-4 ">
+                    <div class="login-btn py-2 px-5 rounded me-2">
+                        <button type="submit" class="btn-login bg-transparent border-0">Save</button>
+                    </div>
+                    <div class="cancel-btn py-2 px-5 rounded mt-2 mt-sm-0">
+                        <button type="button" class="border-0 bg-white">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

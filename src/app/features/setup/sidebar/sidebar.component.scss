@@ -1,0 +1,57 @@
+// sidebar css start
+.sidebar {
+    position: relative;
+    padding-top: 172px;
+    // &:before {
+    //     content: url(assets/images/right-arrow.svg);
+    //     right: 5px;
+    //     position: absolute;
+    //     top: 4px;   
+    // }
+
+    .sidebar-section {
+        width: 290px;
+        overflow-x: hidden;
+        max-height: 100%;
+        //position: fixed;
+        .sidebaar_btn {
+            .tab-btn {
+                img {
+                    fill: #525252;
+                }
+
+                span {
+                    color: #525252;
+                }
+
+                &:hover {
+                    background: #BFCFFF;
+                }
+
+                &:hover span {
+                    color: #00165A;
+                }
+
+                &:hover img {
+                    color: #00165A;
+                }
+            }
+        }
+    }
+}
+
+
+// hover list css 
+.internal-list {
+    display: none;
+    right: -24px;
+    top: 10px;
+    border-radius: 10px;
+    color: #fff;
+    padding: 5px 18px;
+}
+.show-list:hover .internal-list {
+    display: block;
+}
+
+// sidebar css end

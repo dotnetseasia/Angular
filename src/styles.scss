@@ -1,0 +1,134 @@
+/* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+body {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 16px;
+}
+
+.text-blue {
+    color: #00165A;
+}
+
+.text-red {
+    color: #C70000;
+}
+
+.text-gray {
+    color: #474747;
+}
+.p-12 {
+    padding: 12px;
+}
+.text-black {
+    color: #212121;
+}
+.border-blue {
+    border: 1px solid #809FFF;
+}
+.fs-14 {
+    font-size: 14px;
+}
+.p-t {
+    padding-top: 220px;
+}
+input:focus-visible {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+.p-datatable .p-sortable-column:not(.p-highlight):hover {
+    background: #00165a;
+    color: #fff;
+}
+select:focus-visible {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+
+.p-datatable .p-datatable-thead>tr>th {
+    background: #00165A;
+    color: #fff;
+}
+
+.p-dropdown .p-dropdown-label.p-placeholder {
+    font-size: 14px;
+    width: 134px;
+}
+
+.p-dropdown .p-dropdown-label {
+    font-size: 14px;
+    width: 134px;
+}
+
+.form-check-input:checked {
+    background-color: #00165A;
+    border-color: #00165A;
+}
+
+:focus-visible {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+
+.p-dropdown.p-component {
+    width: 100%;
+}
+
+button {
+    font-size: 14px;
+}
+
+input.p-inputtext.p-component.p-element {
+    font-size: 14px;
+}
+
+.table>:not(caption)>*>* {
+    padding: 0;
+}
+
+.navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: none;
+}
+
+.main-btn button {
+    background: #00165A;
+    color: #fff;
+    border: 1px #00165A solid;
+    font-size: 14px;
+    transition: all ease 0.3s;
+    padding: 10px 30px !important;
+
+    &:hover {
+        background-color: #fff;
+        color: #00165A;
+        border: 1px #00165A solid;
+    }
+}
+
+.buttons-section {
+    .login-btn {
+        background-color: #00165A;
+        border: 1px solid #00165A;
+        font-size: 14px;
+        transition: all ease 0.3s;
+        padding: 9px 42px !important;
+
+        .btn-login {
+            color: #fff;
+        }
+
+        &:hover {
+            background-color: #fdfdfd;
+        }
+
+        &:hover .btn-login {
+            color: #00165A;
+        }
+    }
+
+    .cancel-btn {
+        border: 1px solid #00165A;
+        //  padding: 9px 42px !important;
+    }
+}

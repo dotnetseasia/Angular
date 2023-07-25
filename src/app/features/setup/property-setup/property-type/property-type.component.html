@@ -1,0 +1,106 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb ">
+        <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-blue">Property Setup</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page"><a href="#"
+                class="text-decoration-none text-blue fw-bold"> Property Type</a></li>
+    </ol>
+</nav>
+<div class="bg-light p-3 d-flex flex-column flex-md-row justify-content-between align-items-center rounded">
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="">
+            <h4 class="fs-6">Search</h4>
+
+            <div class="p-input-icon-left search border bg-white rounded">
+                <input type="text" pInputText class="border-0 ps-2 px-2" placeholder="Keyword" />
+                <img src="assets/images/search.svg" class="img-fluid pe-3" alt="logo">
+            </div>
+        </div>
+        <div class="my-2 my-sm-0 mx-3">
+            <h4 class="fs-6">Status</h4>
+            <div class="card flex justify-content-center border-0">
+                <p-dropdown [options]="cities" optionLabel="name" class="border-light"></p-dropdown>
+            </div>
+        </div>
+    </div>
+    <div class="main-btn mt-4">
+        <a href="#" class="py-2 px-3 rounded text-decoration-none">Add Account Type</a>
+    </div>
+
+</div>
+<div class="bg-light mt-3  p-3 rounded">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb ">
+            <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-blue">Property Setup</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="#"
+            class="text-decoration-none text-blue fw-bold"> Property Type</a></li>
+        </ol>
+    </nav>
+
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center ">
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="mx-3">
+                <h4 class="fs-6">Property Type</h4>
+
+                <div class="p-inputgroup">
+                    <input pInputText placeholder="Eg: Gs" />
+                </div>
+            </div>
+            <div class="mx-3">
+                <h4 class="fs-6">Description</h4>
+                <div class="p-inputgroup">
+                    <input pInputText placeholder="Keyword" />
+                </div>
+            </div>
+            <div class="my-2 my-sm-0 mx-3">
+                <h4 class="fs-6">Status</h4>
+                <div class="card flex justify-content-center border-0">
+                    <p-dropdown [options]="cities" optionLabel="name" class=""></p-dropdown>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="buttons-section d-flex justify-content-start align-items-center mt-4">
+    <div class="login-btn py-2 px-5 rounded me-2">
+        <button type="submit" class="btn-login bg-transparent border-0">Save</button>
+    </div>
+    <div class="cancel-btn py-2 px-5 rounded mt-2 mt-sm-0">
+        <button type="button" class="border-0 bg-white">Cancel</button>
+    </div>
+</div>
+<div class="customers-list bg-light mt-4 rounded">
+    <select class="select-items border-0 w-100 bg-transparent p-3" aria-label="Default select example">
+        <option selected>List of customers</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+    </select>
+    <p-table [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Account Name</th>
+                <th>Range From</th>
+                <th>Range To</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+            <tr>
+                <td>{{ product.code }}</td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.category }}</td>
+                <td>{{ product.quantity }}</td>
+                <td>{{ product.quantity }}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+    <div class="card flex justify-content-center border-top-0">
+        <p-paginator (onPageChange)="onPageChange($event)" [first]="first"></p-paginator>
+    </div>
+</div>
+
+

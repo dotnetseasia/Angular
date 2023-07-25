@@ -1,0 +1,304 @@
+<div class="lease-section p-t">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="mt-3">
+                    <div class="d-flex">
+                        <div class="guest border rounded p-12 me-2">
+                            <a href="" class="text-decoration-none text-blue fw-bold">Guest Card</a>
+                        </div>
+                        <div class="rental guest border rounded p-12">
+                            <a href="" class="text-decoration-none text-gray fw-medium">Rental Applications</a>
+                        </div>
+                    </div>
+                    <div class="bg-light mt-3 p-3 rounded fs-6 fw-bold">
+                        <div class="mt-1">
+                            <p class="text-blue fs-6">New Guest Card</p>
+                            <div class="d-flex flex-wrap justify-content-start align-items-center">
+                                <div class="me-3 mt-3">
+                                    <h4 class="fs-6">Legal First Name</h4>
+                                    <div class="p-inputgroup">
+                                        <input pInputText placeholder="Keyword" />
+                                    </div>
+                                </div>
+                                <div class="me-3 mt-3">
+                                    <h4 class="fs-6"> Middle Name</h4>
+                                    <div class="p-inputgroup">
+                                        <input pInputText placeholder="Select" />
+                                    </div>
+                                </div>
+                                <div class="me-3 mt-3">
+                                    <h4 class="fs-6">Legal Last Name</h4>
+                                    <div class="p-inputgroup">
+                                        <input pInputText placeholder="Select" />
+                                    </div>
+                                </div>
+                                <div class="me-3 mt-3">
+                                    <h4 class="fs-6">Phone Number</h4>
+                                    <div class="p-inputgroup">
+                                        <input pInputText placeholder="Select" />
+                                    </div>
+                                </div>
+                                <div class="me-3 mt-3">
+                                    <h4 class="fs-6">Email</h4>
+                                    <div class="p-inputgroup">
+                                        <input pInputText placeholder="Select" />
+                                    </div>
+                                </div>
+                                <div class="me-3 mt-3">
+                                    <h4 class="fs-6">Preferred Contact Time</h4>
+                                    <div class="p-inputgroup">
+                                        <input pInputText placeholder="Select" />
+                                    </div>
+                                </div>
+                                <div class="me-3 mt-3">
+                                    <h4 class="fs-6">Leasing Agent</h4>
+                                    <div class="card flex justify-content-center border-0">
+                                        <p-dropdown [options]="LeasingAgents" optionLabel="name" class="border-light"
+                                            placeholder="Leasing agent"></p-dropdown>
+                                    </div>
+                                </div>
+                                <div class="me-3 mt-3">
+                                    <h4 class="fs-6">Market Source</h4>
+                                    <div class="card flex justify-content-center border-0 ">
+                                        <p-dropdown [options]="Marketsources" optionLabel="marketName"
+                                            class="border-light" placeholder=" Select"></p-dropdown>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-light mt-3 p-3 rounded fs-6 fw-bold">
+                        <div class="mt-1">
+                            <p class="text-blue fs-6">Current Address </p>
+                            <div class="check-box my-3">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    class="me-2">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Bypass(For Foreign Address)
+                                </label>
+                            </div>
+                            <div class="d-flex flex-wrap justify-content-start align-items-center">
+                                <div class="me-3 mt-3">
+                                    <h4 class="fs-6">Street Number</h4>
+                                    <div class="p-inputgroup">
+                                        <input pInputText placeholder="Keyword" />
+                                    </div>
+                                </div>
+                                <div class="me-3 mt-3">
+                                    <h4 class="fs-6"> Street Name</h4>
+                                    <div class="p-inputgroup">
+                                        <input pInputText placeholder="Select" />
+                                    </div>
+                                </div>
+
+                                <div class="me-3 mt-3">
+                                    <h4 class="fs-6">Country</h4>
+                                    <div class="card flex justify-content-center border-0 ">
+                                        <p-dropdown [options]="country" optionLabel="countryName"
+                                            (onChange)="onCountryChange($event)" optionValue="value"
+                                            class="border-light" placeholder=" Select"></p-dropdown>
+                                    </div>
+                                </div>
+                                <div class="me-3 mt-3">
+                                    <h4 class="fs-6">State/Province</h4>
+                                    <div class="card flex justify-content-center border-0 ">
+                                        <p-dropdown [options]="state" optionLabel="statename"
+                                            (onChange)="onCountryChange($event)" optionValue="value"
+                                            class="border-light" placeholder=" Select"></p-dropdown>
+                                    </div>
+                                </div>
+                                <div class="me-3 mt-3">
+                                    <h4 class="fs-6">City</h4>
+                                    <div class="card flex justify-content-center border-0 ">
+                                        <p-dropdown [options]="city" optionLabel="city"
+                                            (onChange)="onStateChange($event)" optionValue="value" class="border-light"
+                                            placeholder=" Select"></p-dropdown>
+                                    </div>
+                                </div>
+                                <div class="me-3 mt-3">
+                                    <h4 class="fs-6">Postal Code</h4>
+                                    <div class="p-inputgroup">
+                                        <input pInputText placeholder="Select" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-light mt-3 p-3 rounded fs-6 fw-bold">
+                        <div class="mt-1">
+                            <p class="text-blue fs-6">Unit Search</p>
+                            <div class="d-flex flex-wrap justify-content-start align-items-center">
+                                <div class="me-3 mt-3">
+                                    <h4 class="fs-6">Expected MI Date</h4>
+                                    <div class="p-inputgroup">
+                                        <input pInputText placeholder="Keyword" />
+                                    </div>
+                                </div>
+                                <div class="me-3 mt-3">
+                                    <h4 class="fs-6">Lease Term</h4>
+                                    <div class="p-inputgroup">
+                                        <input pInputText placeholder="Select" />
+                                    </div>
+                                </div>
+                                <div class="me-3 mt-3">
+                                    <h4 class="fs-6">Lease Expiry Dt</h4>
+                                    <div class="p-inputgroup">
+                                        <input pInputText placeholder="Select" />
+                                    </div>
+                                </div>
+                                <div class="me-3 mt-3">
+                                    <h4 class="fs-6">Area</h4>
+                                    <div class="card flex justify-content-center border-0 ">
+                                        <p-dropdown [options]="Areas" optionLabel="propertyArea" class="border-light"
+                                            placeholder=" Select"></p-dropdown>
+                                    </div>
+                                </div>
+                                <div class="me-3 mt-3">
+                                    <h4 class="fs-6">Property Id</h4>
+                                    <div class="p-inputgroup">
+                                        <input pInputText placeholder="Select" />
+                                    </div>
+                                </div>
+                                <div class="me-3 mt-3">
+                                    <h4 class="fs-6">Operating Unit Typ</h4>
+                                    <div class="card flex justify-content-center border-0 ">
+                                        <p-dropdown [options]="operatingUnitType" optionLabel="OperatingUnitType"
+                                            class="border-light" placeholder=" Select"></p-dropdown>
+                                    </div>
+                                </div>
+                                <div class="me-3 mt-3">
+                                    <h4 class="fs-6">Bedrooms</h4>
+                                    <div class="card flex justify-content-center border-0 ">
+                                        <p-dropdown [options]="BedRoomBathroomsbytext"
+                                            optionLabel="buildingUnitTotalBathrooms" class="border-light"
+                                            placeholder=" Select"></p-dropdown>
+                                    </div>
+                                </div>
+                                <div class="me-3 mt-3">
+                                    <h4 class="fs-6">Bathrooms</h4>
+                                    <div class="card flex justify-content-center border-0 ">
+                                        <p-dropdown [options]="BedRoomBathroomsData"
+                                            optionLabel="buildingUnitTotalBedrooms" class="border-light"
+                                            placeholder=" Select"></p-dropdown>
+                                    </div>
+                                </div>
+                                <div class="me-3 mt-3">
+                                    <h4 class="fs-6">Min Rent</h4>
+                                    <div class="p-inputgroup">
+                                        <input pInputText placeholder="Select" />
+                                    </div>
+                                </div>
+                                <div class="me-3 mt-3">
+                                    <h4 class="fs-6">Max Rent</h4>
+                                    <div class="p-inputgroup">
+                                        <input pInputText placeholder="Select" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="check-box mt-4">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    class="me-2">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Show units with concession only
+                                </label>
+                            </div>
+                        </div>
+                        <div class="buttons-section d-flex justify-content-start align-items-center mt-4">
+                            <div class="login-btn py-2 px-5 rounded me-2">
+                                <button type="submit" class="btn-login bg-transparent border-0">Search</button>
+                            </div>
+                        </div>
+                        <div class="customers-list bg-light mt-4 rounded">
+                            <p-table [tableStyle]="{ 'min-width': '120rem' }">
+                                <ng-template pTemplate="header">
+                                    <tr>
+                                        <th>Pre approval</th>
+                                        <th>Has App?</th>
+                                        <th>Property Id</th>
+                                        <th>Bulding Id</th>
+                                        <th>Unit no.</th>
+                                        <th>Opt Unit Type</th>
+                                        <th>Rent</th>
+                                        <th>Concession</th>
+                                        <th>Bedroom</th>
+                                        <th>Bathrooms</th>
+                                        <th>Sq. Feet</th>
+                                        <th>Unit Status</th>
+                                        <th>Available Date</th>
+                                    </tr>
+                                </ng-template>
+                                <ng-template pTemplate="body" let-product>
+                                    <tr>
+                                        <td>{{ product.code }}</td>
+                                        <td>{{ product.name }}</td>
+                                        <td>{{ product.category }}</td>
+                                        <td>{{ product.quantity }}</td>
+                                        <td>{{ product.quantity }}</td>
+                                    </tr>
+                                </ng-template>
+                            </p-table>
+                        </div>
+                    </div>
+                    <div class="notes-table p-3">
+                        <div class="bg-light mt-3 p-3 rounded fs-6 fw-bold border">
+                            <div class="heading-notes m-2">
+                                <p class="para-notes">Notes</p>
+                            </div>
+                        </div>
+                        <div class="customers-list bg-light rounded">
+                            <p-table [tableStyle]="{ 'min-width': '50rem' }">
+                                <ng-template pTemplate="header">
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>User Id</th>
+                                        <th>Notes</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </ng-template>
+                                <ng-template pTemplate="body" let-product>
+                                    <tr>
+                                        <td>{{ product.code }}</td>
+                                        <td>{{ product.name }}</td>
+                                        <td>{{ product.category }}</td>
+                                        <td>{{ product.quantity }}</td>
+                                    </tr>
+                                </ng-template>
+                            </p-table>
+                            <div class="card flex justify-content-center border-top-0">
+                                <p-paginator (onPageChange)="onPageChange($event)" [first]="first"></p-paginator>
+                            </div>
+                        </div>
+                        <div class="bg-light mt-3 p-3 rounded fs-6 fw-bold">
+                            <div class="mt-1">
+                                <p class="text-blue fs-6">Add Note</p>
+                                <div class="d-flex flex-wrap justify-content-start align-items-center">
+                                    <div class="me-3">
+                                        <div class="p-inputgroup">
+                                            <input pInputText placeholder="Keyword" />
+                                        </div>
+                                    </div>
+                                    <div class="buttons-section d-flex justify-content-end align-items-center">
+                                        <div class="login-btn py-2 px-4 rounded me-2">
+                                            <button type="submit" class="btn-login bg-transparent border-0">Add</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <div class="buttons-section d-flex justify-content-end align-items-center mt-4">
+                                <div class="login-btn py-2 px-5 rounded me-2">
+                                    <button type="submit" class="btn-login bg-transparent border-0">Save</button>
+                                </div>
+                                <div class="cancel-btn py-2 px-5 rounded mt-2 mt-sm-0">
+                                    <button type="button" class="border-0 bg-white">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,134 @@
+<!-- !-- sidebar section start -->
+<div class="sidebar">
+    <div class="sidebar-section border">
+        <div class="admin-logo d-flex justify-content-start align-items-stretch bg-white p-2 px-4 mt-4">
+            <div class="sidebar-logo bg-white rounded">
+                <a href="/" class="text-decoration-none text-center pe-2"><img
+                src="assets/images/profile-images.svg" class="img-fluid " alt="logo"></a>
+            </div>
+            <span>
+                <div class="admin ms-2">
+                    <h1 class="mb-0 fs-5 fw-semibold"> Admin </h1>
+                    <p class="naming mb-0 fw-semibold fs-6">
+                        admin@demo.com
+                    </p>
+                </div>
+            </span>
+        </div>
+        <div class="z-3 px-4">
+            <div class="sidebaar_btn">
+                <ul class="list-unstyled">
+                    <li class="tab-btn py-3 px-2 rounded my-2">
+                        <a href="" [routerLink]="['company-setup/company']"
+                            class="dashboard-btn text-decoration-none"><img src="assets/images/setup.svg"
+                                class="img-fluid" alt="sidebar-icon">
+                            <span class="ps-3">Company Setup</span></a>
+                    </li>
+                    <li class="tab-btn py-3 px-2 rounded my-2 show-list position-relative">
+                        <a href="" [routerLink]="['property-setup/property']"
+                            class="dashboard-btn text-decoration-none"><span class="main-icon">
+                                <img src="assets/images/setting.svg" class="img-fluid" alt="sidebar-icon">
+                            </span><span class="ps-3">Property Setup</span></a>
+                        <ul class="internal-list list-unstyled position-absolute bg-light border">
+                            <li class="my-2"> <a [routerLink]="['property-setup/property-type']" class="text-decoration-none text-blue fs-14">Property Type</a>
+                            </li>
+                            <li class="my-2"> <a [routerLink]="['property-setup/amenities']" class="text-decoration-none text-blue fs-14">Amenities </a>
+                            </li>
+                            <li class="my-2"> <a [routerLink]="['property-setup/area']" class="text-decoration-none text-blue fs-14">Area </a></li>
+                            <li class="my-2"> <a [routerLink]="['property-setup/market-area']" class="text-decoration-none text-blue fs-14">Market Area </a>
+                            </li>
+                            <li class="my-2"> <a [routerLink]="['property-setup/regional-sites']" class="text-decoration-none text-blue fs-14"> Regional
+                                    Sites</a>
+                            </li>
+                            <li class="my-2"> <a [routerLink]="['property-setup/operating-unit-type']" class="text-decoration-none text-blue fs-14"> Operating
+                                    UnitType </a>
+                            </li>
+                            <li class="my-2"> <a [routerLink]="['property-setup/incentive']" class="text-decoration-none text-blue fs-14"> Incentive </a>
+                            </li>
+                            <li class="my-2"> <a [routerLink]="['property-setup/vacate-reason']" class="text-decoration-none text-blue fs-14">Vacate Reason
+                                </a>
+                            </li>
+                            <li class="my-2"> <a [routerLink]="['property-setup/special-type-of-prospect']" class="text-decoration-none text-blue fs-14">Special Type of
+                                    Prospect </a> </li>
+                            <li class="my-2"> <a [routerLink]="['property-setup/early-movein-bonus']" class="text-decoration-none text-blue fs-14"> Early Move in
+                                    Bonus </a></li>
+                            <li class="my-2"> <a [routerLink]="['property-setup/market-source']" class="text-decoration-none text-blue fs-14"> Market Source
+                                </a>
+                            </li>
+                            <li class="my-2"> <a [routerLink]="['property-setup/checklist']" class="text-decoration-none text-blue fs-14">Check List </a>
+                            </li>
+                            <li class="my-2"> <a [routerLink]="['property-setup/employee-position']" class="text-decoration-none text-blue fs-14"> Employee
+                                    Position </a></li>
+                            <li class="my-2"> <a [routerLink]="['property-setup/credit-checkuser-setup']" class="text-decoration-none text-blue fs-14"> Credit Check
+                                    User Setup </a> </li>
+                            <li class="my-2"> <a [routerLink]="['property-setup/equipment-type']" class="text-decoration-none text-blue fs-14">Equipment Type
+                                </a>
+                            </li>
+                            <li class="my-2"> <a [routerLink]="['property-setup/unit-status']" class="text-decoration-none text-blue fs-14">Unit Setup </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="tab-btn py-3 px-2 rounded my-2 ">
+                        <a href="" [routerLink]="['accounting/accounting']"
+                            class="dashboard-btn text-decoration-none"><img src="assets/images/accounting.svg"
+                                class="img-fluid" alt="sidebar-icon">
+                            <span class="ps-3">Accounting</span></a>
+                    </li>
+                    <li class="tab-btn py-3 px-2 rounded my-2 ">
+                        <a href="" [routerLink]="['users/users']" class="dashboard-btn text-decoration-none"><img
+                                src="assets/images/users.svg" class="img-fluid" alt="sidebar-icon">
+                            <span class="ps-3">Users</span></a>
+                    </li>
+                    <li class="tab-btn py-3 px-2 rounded my-2 ">
+                        <a href="" [routerLink]="['vendor/vendor']" class="dashboard-btn text-decoration-none"><img
+                                src="assets/images/vender.svg" class="img-fluid" alt="sidebar-icon">
+                            <span class="ps-3">Vendor</span></a>
+                    </li>
+                    <li class="tab-btn py-3 px-2 rounded my-2 ">
+                        <a href="" [routerLink]="['maintenance/maintenance']"
+                            class="dashboard-btn text-decoration-none"><span class="main-icon">
+                                <img src="assets/images/maintenance.svg" class="img-fluid" alt="sidebar-icon">
+                            </span><span class="ps-3">Maintenance</span></a>
+                    </li>
+                    <li class="tab-btn py-3 px-2 rounded my-2 ">
+                        <a href="" [routerLink]="['alerts/alerts']" class="dashboard-btn text-decoration-none"><img
+                                src="assets/images/alerts.svg" class="img-fluid" alt="sidebar-icon">
+                            <span class="ps-3">Alerts</span></a>
+                    </li>
+                    <li class="tab-btn py-3 px-2 rounded my-2 ">
+                        <a href="" [routerLink]="['events/events']" class="dashboard-btn text-decoration-none"><img
+                                src="assets/images/events.svg" class="img-fluid" alt="sidebar-icon">
+                            <span class="ps-3">Events</span></a>
+                    </li>
+                    <li class="tab-btn py-3 px-2 rounded my-2 ">
+                        <a href="" [routerLink]="['fee-management/fee']" class="dashboard-btn text-decoration-none"><img
+                                src="assets/images/f-mngment.svg" class="img-fluid" alt="sidebar-icon">
+                            <span class="ps-3">Fee Management</span></a>
+                    </li>
+                    <li class="tab-btn py-3 px-2 rounded my-2 ">
+                        <a href="" [routerLink]="['budgeting/budgeting']"
+                            class="dashboard-btn text-decoration-none"><span class="main-icon">
+                                <img src="assets/images/budgeting.svg" class="img-fluid" alt="sidebar-icon">
+                            </span><span class="ps-3">Budgeting</span></a>
+                    </li>
+                    <li class="tab-btn py-3 px-2 rounded my-2 ">
+                        <a href="" [routerLink]="['templates/templates']"
+                            class="dashboard-btn text-decoration-none"><img src="assets/images/tamplate.svg"
+                                class="img-fluid" alt="sidebar-icon">
+                            <span class="ps-3">Templates</span></a>
+                    </li>
+                    <li class="tab-btn py-3 px-2 rounded my-2 ">
+                        <a href="" [routerLink]="['reporting/reporting']"
+                            class="dashboard-btn text-decoration-none"><img src="assets/images/reporting.svg"
+                                class="img-fluid" alt="sidebar-icon">
+                            <span class="ps-3">Reporting</span></a>
+                    </li>
+                    <li class="tab-btn logout py-3 px-2 rounded my-2 ">
+                        <a href="#" class="dashboard-btn text-decoration-none"><img
+                                src="assets/images/logout.svg" class="img-fluid" alt="sidebar-icon">
+                            <span class="ps-3 fw-semibold text-red">Logout</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
